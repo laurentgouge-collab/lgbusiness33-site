@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retrait de permis : suspension, annulation, invalidation, les démarches pour le récupérer</title>
+<meta name="description" content="Permis suspendu, annulé ou invalidé : délais, contrôle médical, test psychotechnique, examens à repasser et obligations légales, situation par situation, avec les liens officiels.">
+<link rel="canonical" href="https://laurentgouge-collab.github.io/lgbusiness33-site/test-psychotechnique/demarches/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Retrait de permis : suspension, annulation, invalidation, les démarches pour le récupérer">
+<meta property="og:description" content="Permis suspendu, annulé ou invalidé : délais, contrôle médical, test psychotechnique, examens à repasser et obligations légales, situation par situation, avec les liens officiels.">
+<meta property="og:url" content="https://laurentgouge-collab.github.io/lgbusiness33-site/test-psychotechnique/demarches/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bleu: #0E518D;
+    --bleu-hover: #0B4378;
+    --marine: #0B2F52;
+    --encre: #16202B;
+    --gris: #56606B;
+    --fond: #F4F6F8;
+    --ligne: #DDE3E9;
+    --blanc: #FFFFFF;
+    --police: "Public Sans", "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; font-family: var(--police); font-size: 17px; line-height: 1.6; color: var(--encre); background: var(--blanc); }
+  a { color: var(--bleu); }
+  :focus-visible { outline: 3px solid #F5C400; outline-offset: 2px; }
+  .wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+  h1, h2, h3 { margin: 0; color: var(--marine); }
+  h1 { font-size: clamp(40px, 5.6vw, 68px); font-weight: 800; line-height: 1.04; letter-spacing: -.025em; }
+  h2 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; line-height: 1.12; letter-spacing: -.015em; }
+  h3 { font-size: 19px; font-weight: 700; line-height: 1.3; }
+  p { margin: 0 0 1em; }
+
+  .btn { display: inline-block; background: var(--bleu); color: var(--blanc); font: inherit; font-weight: 700; font-size: 17px;
+         text-decoration: none; border: 0; border-radius: 8px; padding: 15px 26px; cursor: pointer; }
+  .btn:hover { background: var(--bleu-hover); }
+
+  /* En-tête */
+  header.top { border-bottom: 1px solid var(--ligne); background: var(--blanc); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+  .marque { display: flex; align-items: center; gap: 12px; color: var(--marine); text-decoration: none; font-weight: 700; font-size: 17px; }
+  .marque svg { flex: none; }
+  .top .btn { padding: 10px 18px; font-size: 15px; }
+
+  /* Hero */
+  .hero { padding: 64px 0 0; border-bottom: 1px solid var(--ligne); }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: end; }
+  .hero-texte { padding-bottom: 64px; }
+  .hero h1 { margin-bottom: 22px; }
+  .chapo { font-size: 20px; color: var(--gris); max-width: 34ch; margin-bottom: 32px; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+  .tarif { color: var(--gris); font-size: 16px; }
+  .tarif strong { color: var(--encre); font-size: 22px; font-weight: 800; margin-right: 4px; }
+  .confiance { display: flex; flex-wrap: wrap; gap: 14px 32px; list-style: none; margin: 40px 0 0; padding: 26px 0 0; border-top: 1px solid var(--ligne); }
+  .confiance li { display: flex; align-items: center; gap: 10px; font-size: 15.5px; font-weight: 600; color: var(--encre); }
+  .confiance svg { flex: none; color: var(--bleu); }
+  .panneau-svg { display: block; width: 100%; max-width: 440px; height: auto; margin-left: auto; }
+
+  section { padding: 88px 0; }
+  .fond { background: var(--fond); }
+  .chapeau { max-width: 62ch; color: var(--gris); margin: 14px 0 0; }
+
+  /* Cas obligatoires */
+  .cas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 44px; }
+  .cas > div { border-top: 3px solid var(--bleu); padding-top: 20px; }
+  .cas h3 { margin-bottom: 8px; }
+  .cas p { color: var(--gris); margin: 0; font-size: 16px; }
+  .precision { margin: 40px 0 0; color: var(--gris); font-size: 15.5px; max-width: 82ch; }
+
+  /* Étapes */
+  .etapes { list-style: none; margin: 48px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: e; position: relative; }
+  .etapes::before { content: ""; position: absolute; top: 21px; left: 22px; right: 22px; height: 2px; background: var(--ligne); }
+  .etapes li { counter-increment: e; position: relative; }
+  .etapes li::before { content: counter(e); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+                       background: var(--bleu); color: var(--blanc); font-weight: 800; font-size: 18px; margin-bottom: 18px;
+                       box-shadow: 0 0 0 6px var(--blanc); position: relative; }
+  .etapes h3 { margin-bottom: 6px; }
+  .etapes p { color: var(--gris); margin: 0; font-size: 16px; }
+  .jour { margin: 56px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--ligne); border-radius: 10px; }
+  .jour div { padding: 22px 24px; border-left: 1px solid var(--ligne); }
+  .jour div:first-child { border-left: 0; }
+  .jour dt { font-weight: 700; color: var(--marine); }
+  .jour dd { margin: 4px 0 0; color: var(--gris); font-size: 15.5px; }
+
+  /* Départements */
+  .zone .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; }
+  .deps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; }
+  .deps li { display: flex; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--ligne); font-weight: 600; }
+  .deps li span { width: 28px; color: var(--bleu); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  /* Formulaire */
+  .inscription .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
+  .suite { margin: 28px 0 0; padding: 0; list-style: none; counter-reset: s; }
+  .suite li { counter-increment: s; display: flex; gap: 14px; margin-bottom: 14px; color: var(--gris); }
+  .suite li::before { content: counter(s); flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+                      border: 2px solid var(--bleu); color: var(--bleu); font-weight: 700; font-size: 14px; }
+  form { border: 1px solid var(--ligne); border-radius: 12px; padding: 32px; background: var(--blanc); box-shadow: 0 18px 40px -24px rgba(11,47,82,.35); }
+  .champ { margin-bottom: 18px; }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label { display: block; font-weight: 600; font-size: 15px; margin-bottom: 6px; color: var(--encre); }
+  .aide { font-weight: 400; color: var(--gris); }
+  input[type=text], input[type=tel], input[type=email], select, textarea {
+    width: 100%; font: inherit; font-size: 16.5px; color: var(--encre); background: var(--blanc);
+    border: 1.5px solid #C9D1DA; border-radius: 8px; padding: 12px 14px; }
+  textarea { min-height: 92px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--bleu); box-shadow: 0 0 0 3px rgba(14,81,141,.15); }
+  .accord { display: flex; gap: 12px; align-items: flex-start; margin: 4px 0 22px; }
+  .accord input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--bleu); flex: none; }
+  .accord label { font-weight: 400; font-size: 14.5px; color: var(--gris); margin: 0; }
+  form .btn { width: 100%; font-size: 18px; padding: 16px; }
+  .sous-bouton { font-size: 14px; color: var(--gris); margin: 12px 0 0; text-align: center; }
+  .piege { position: absolute; left: -9999px; }
+
+  /* Questions */
+  .faq .wrap { max-width: 840px; }
+  details { border-bottom: 1px solid var(--ligne); }
+  details:first-of-type { border-top: 1px solid var(--ligne); }
+  summary { cursor: pointer; list-style: none; padding: 20px 44px 20px 0; position: relative; font-weight: 700; font-size: 18px; color: var(--marine); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: ""; position: absolute; right: 8px; top: 27px; width: 10px; height: 10px; border-right: 2px solid var(--bleu);
+                   border-bottom: 2px solid var(--bleu); transform: rotate(45deg); transition: transform .15s; }
+  details[open] summary::after { transform: rotate(-135deg); top: 31px; }
+  details p { color: var(--gris); margin: -4px 0 22px; max-width: 70ch; }
+
+  footer { background: var(--marine); color: #B7C3D1; font-size: 14px; padding: 44px 0 100px; }
+  footer p { max-width: 92ch; }
+  footer b { color: var(--blanc); font-weight: 600; }
+
+  .merci { display: none; background: var(--bleu); color: var(--blanc); padding: 16px 0; }
+  .merci.visible { display: block; }
+  .merci b { margin-right: 6px; }
+
+  .barre { display: none; }
+
+  @media (max-width: 900px) {
+    body { font-size: 16.5px; }
+    .hero { padding-top: 36px; }
+    .hero .wrap, .zone .wrap, .inscription .wrap { grid-template-columns: 1fr; gap: 32px; }
+    .hero-texte { padding-bottom: 0; }
+    .panneau-svg { max-width: 300px; margin: 0 auto; }
+    .cas, .etapes { grid-template-columns: 1fr; gap: 28px; }
+    .etapes::before { display: none; }
+    .jour { grid-template-columns: 1fr 1fr; }
+    .jour div:nth-child(3) { border-left: 0; }
+    .jour div:nth-child(n+3) { border-top: 1px solid var(--ligne); }
+    section { padding: 60px 0; }
+    form { padding: 22px; }
+    .barre { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--blanc);
+             border-top: 1px solid var(--ligne); padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); transition: transform .2s; }
+    .barre .btn { display: block; text-align: center; }
+    .barre.cachee { transform: translateY(110%); }
+  }
+  @media (max-width: 520px) {
+    .duo, .deps { grid-template-columns: 1fr; }
+    .duo { gap: 0; }
+    .top .btn { display: none; }
+    .jour { grid-template-columns: 1fr; }
+    .jour div { border-left: 0; border-top: 1px solid var(--ligne); }
+    .jour div:first-child { border-top: 0; }
+  }
+
+  .fil { font-size: 14.5px; color: var(--gris); padding: 14px 0 0; }
+  .fil a { color: var(--gris); }
+  .liens-deps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; }
+  .liens-deps li { border-bottom: 1px solid var(--ligne); }
+  .liens-deps a { display: flex; gap: 14px; padding: 11px 0; font-weight: 600; color: var(--encre); text-decoration: none; }
+  .liens-deps a span { width: 28px; color: var(--bleu); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .liens-deps a:hover { color: var(--bleu); }
+  .liens-deps a:hover b { text-decoration: underline; }
+  .liens-deps b { font-weight: 600; }
+  .lieu { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
+  .lieu .bloc { border-left: 3px solid var(--bleu); padding: 4px 0 4px 22px; }
+  .lieu .bloc p:last-child { margin-bottom: 0; }
+  .villes { color: var(--gris); font-size: 15.5px; }
+  .villes strong { color: var(--encre); font-weight: 600; }
+  .apres { list-style: none; margin: 44px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .apres li { border-top: 3px solid var(--ligne); padding-top: 18px; }
+  .apres li:first-child { border-top-color: var(--bleu); }
+  .apres h3 { margin-bottom: 6px; }
+  .apres p { color: var(--gris); margin: 0; font-size: 16px; }
+  .autres { font-size: 15px; color: var(--gris); }
+  .autres a { color: var(--bleu); }
+  .pro-lien { border-top: 1px solid rgba(255,255,255,.18); margin-top: 22px; padding-top: 18px; }
+  footer a { color: var(--blanc); }
+  .atouts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 44px; }
+  .atouts > div { border-top: 3px solid var(--bleu); padding-top: 20px; }
+  .atouts h3 { margin-bottom: 8px; }
+  .atouts p { color: var(--gris); margin: 0; font-size: 16px; }
+  .nav-top { display: flex; align-items: center; gap: 22px; }
+  .lien-guide { color: var(--encre); font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
+  .lien-guide:hover { color: var(--bleu); text-decoration: underline; }
+  .guide-cas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
+  .guide-cas > div { border-top: 3px solid var(--bleu); padding-top: 18px; }
+  .guide-cas h3 { margin-bottom: 8px; }
+  .guide-cas p { color: var(--gris); font-size: 16px; margin: 0 0 8px; }
+  .situation { border-top: 1px solid var(--ligne); padding: 32px 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; }
+  .situation:first-of-type { border-top: 0; }
+  .situation h3 { font-size: 22px; }
+  .situation ol, .situation ul { margin: 0; padding-left: 22px; }
+  .situation li { margin-bottom: 10px; }
+  .situation .note { color: var(--gris); font-size: 15.5px; margin-top: 14px; }
+  .obligations { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 48px; }
+  .obligations li { border-left: 3px solid var(--marine); padding: 2px 0 2px 18px; }
+  .obligations b { display: block; margin-bottom: 4px; }
+  .liens-off { list-style: none; padding: 0; margin: 28px 0 0; }
+  .liens-off li { border-bottom: 1px solid var(--ligne); padding: 12px 0; }
+  .liens-off a { font-weight: 600; color: var(--bleu); }
+  .liens-off span { color: var(--gris); font-size: 15px; display: block; }
+  .encart { border-left: 3px solid var(--bleu); padding: 6px 0 6px 22px; margin-top: 36px; }
+  @media (max-width: 900px) {
+    .lieu, .apres, .atouts, .guide-cas, .situation, .obligations { grid-template-columns: 1fr; gap: 28px; }
+  }
+  @media (max-width: 640px) { .lien-guide { font-size: 14px; } }
+  @media (max-width: 520px) { .liens-deps { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Puis-je conduire en attendant ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Conduire pendant une suspension, une annulation ou une invalidation est un délit puni de 2 ans d'emprisonnement et de 4 500 € d'amende."}}, {"@type": "Question", "name": "Dois-je repasser tout le permis ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas toujours. Après une annulation ou une invalidation, vous ne repassez que le code si vous aviez le permis depuis au moins 3 ans, si la privation dure moins d'un an et si vous vous inscrivez dans les 9 mois. Sinon, vous repassez le code et la conduite."}}, {"@type": "Question", "name": "Mon médecin traitant peut-il faire la visite médicale ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le contrôle se fait chez un médecin agréé par la préfecture, qui ne peut pas être votre médecin traitant, ou devant la commission médicale de la préfecture selon le motif. Votre courrier précise laquelle."}}, {"@type": "Question", "name": "Dans quel ordre faire les démarches ?", "acceptedAnswer": {"@type": "Answer", "text": "Test psychotechnique d'abord (s'il est exigé), puis contrôle médical, puis demande de permis sur le site de l'ANTS."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Test psychotechnique du permis", "item": "https://laurentgouge-collab.github.io/lgbusiness33-site/test-psychotechnique/"}, {"@type": "ListItem", "position": 2, "name": "Les démarches", "item": "https://laurentgouge-collab.github.io/lgbusiness33-site/test-psychotechnique/demarches/"}]}</script>
+</head>
+<body>
+
+<div class="merci" id="merci" role="status"><div class="wrap"><b>Demande envoyée.</b>Vous allez recevoir un email avec votre numéro de dossier, puis un appel du centre pour fixer le rendez-vous.</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="../">
+      <svg width="34" height="26" viewBox="0 0 34 26" aria-hidden="true"><rect width="34" height="26" rx="4" fill="#0E518D"/><rect x="2.5" y="2.5" width="29" height="21" rx="2.5" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M10 15 L14 10 L18 15 M14 10 V20" fill="none" stroke="#fff" stroke-width="2"/></svg>
+      Test psychotechnique du permis
+    </a>
+    <nav class="nav-top">
+      <a class="lien-guide" href="../demarches/">Les démarches</a>
+      <a class="btn" href="../#inscription">S'inscrire</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap fil"><a href="../">Test psychotechnique du permis</a> › Les démarches</div>
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="hero-texte">
+      <h1>Retrait de permis&nbsp;: les démarches pour le récupérer</h1>
+      <p class="chapo">Suspension, annulation, invalidation : ce que dit la loi, ce qu'il faut faire et dans quel ordre.</p>
+      <div class="actions">
+        <a class="btn" href="#situations">Voir ma situation</a>
+        <span class="tarif">Informations générales, à jour en 11/2026</span>
+      </div>
+    </div>
+    <div><svg class="panneau-svg" viewBox="0 0 420 470" role="img" aria-label="Panneau de direction : test psychotechnique, puis visite médicale et permis de conduire" xmlns="http://www.w3.org/2000/svg"><rect x="203" y="250" width="14" height="220" fill="#B8C0CA"/><rect x="196" y="464" width="28" height="6" fill="#98A1AC"/><g transform="translate(20,20)"><rect width="380" height="190" rx="16" fill="#0E518D"/><rect x="9" y="9" width="362" height="172" rx="10" fill="none" stroke="#FFFFFF" stroke-width="4.5"/><path d="M44 76 L64 50 L84 76 M64 50 V102" fill="none" stroke="#FFFFFF" stroke-width="8"/><text x="108" y="88" font-family="Barlow Condensed, 'Arial Narrow', sans-serif" font-weight="600" font-size="46" fill="#FFFFFF" textLength="236" lengthAdjust="spacingAndGlyphs">Visite médicale</text><path d="M44 150 L64 124 L84 150 M64 124 V172" fill="none" stroke="#FFFFFF" stroke-width="8"/><text x="108" y="161" font-family="Barlow Condensed, 'Arial Narrow', sans-serif" font-weight="600" font-size="46" fill="#FFFFFF" textLength="236" lengthAdjust="spacingAndGlyphs">Permis de conduire</text></g><g transform="translate(60,226)"><rect width="300" height="62" rx="9" fill="#FFFFFF" stroke="#16202B" stroke-width="3"/><text x="150" y="42" text-anchor="middle" font-family="Barlow Condensed, 'Arial Narrow', sans-serif" font-weight="700" font-size="34" fill="#16202B" textLength="244" lengthAdjust="spacingAndGlyphs">Test psychotechnique</text></g></svg></div>
+  </div>
+</section>
+
+<section class="fond">
+  <div class="wrap">
+    <h2>Trois situations, trois procédures</h2>
+    <p class="chapeau">Le courrier de la préfecture ou la décision de justice indique dans quel cas vous êtes.</p>
+    <div class="guide-cas">
+      <div><h3>Suspension</h3><p>Le permis vous est retiré pour une durée fixée, par le préfet (suspension administrative, en général 6 mois au plus, jusqu'à 1 an dans certains cas) ou par un juge.</p><p>À la fin, il vous est rendu, après un contrôle médical si la suspension dépasse 1 mois.</p></div>
+      <div><h3>Annulation</h3><p>Décidée par un juge. Le permis n'existe plus, et le juge fixe une durée pendant laquelle vous ne pouvez pas en demander un nouveau : jusqu'à 3 ans, et jusqu'à 10 ans dans les cas les plus graves.</p></div>
+      <div><h3>Invalidation</h3><p>Vous avez perdu tous vos points : la lettre « 48SI » vous l'annonce. Vous remettez votre permis à la préfecture et restez 6 mois sans permis, ou 1 an si c'est déjà arrivé dans les 5 dernières années.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="situations">
+  <div class="wrap">
+    <h2>Ce qu'il faut faire, situation par situation</h2>
+    <div class="situation">
+      <div><h3>Après une suspension</h3></div>
+      <div>
+        <ol>
+          <li><b>1 mois ou moins</b> : vous récupérez votre permis à la préfecture à la fin de la suspension.</li>
+          <li><b>Plus d'1 mois</b> : contrôle médical (36 €) avant la fin de la suspension, puis demande de restitution en ligne sur le site de l'ANTS avec l'avis médical.</li>
+          <li><b>6 mois ou plus</b> : test psychotechnique d'abord, puis le contrôle médical.</li>
+        </ol>
+        <p class="note">Si la suspension est liée à l'alcool ou aux stupéfiants, le contrôle médical peut avoir lieu devant la commission médicale de la préfecture : votre courrier le précise.</p>
+      </div>
+    </div>
+    <div class="situation">
+      <div><h3>Après une invalidation (solde nul)</h3></div>
+      <div>
+        <ol>
+          <li>Remettez votre permis à la préfecture dans le délai indiqué par la lettre 48SI. Gardez le récépissé (« référence 44 ») : il sert pour la suite.</li>
+          <li>Pendant le délai de 6 mois ou 1 an, vous pouvez déjà passer le test psychotechnique, puis le contrôle médical, et vous inscrire à l'examen sur le site de l'ANTS.</li>
+          <li>Vous ne repassez que le code si vous aviez le permis depuis au moins 3 ans, si le délai est de 6 mois et si vous vous inscrivez dans les 9 mois suivant la remise du permis. Sinon : code et conduite.</li>
+        </ol>
+        <p class="note">Le nouveau permis est un permis probatoire.</p>
+      </div>
+    </div>
+    <div class="situation">
+      <div><h3>Après une annulation</h3></div>
+      <div>
+        <ol>
+          <li>Attendez la fin de l'interdiction fixée par le juge : les démarches se font après.</li>
+          <li>Test psychotechnique, puis contrôle médical, puis inscription à l'examen sur le site de l'ANTS.</li>
+          <li>Vous ne repassez que le code si vous aviez le permis depuis au moins 3 ans, si l'interdiction a duré moins d'un an et si vous vous inscrivez dans les 9 mois suivant sa fin. Sinon : code et conduite.</li>
+        </ol>
+        <p class="note">Le nouveau permis est un permis probatoire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fond">
+  <div class="wrap">
+    <h2>Les obligations à connaître</h2>
+    <ul class="obligations">
+      <li><b>Ne pas conduire</b>Conduire pendant une suspension, une annulation ou une invalidation est un délit : jusqu'à 2 ans d'emprisonnement et 4 500 € d'amende.</li>
+      <li><b>Remettre son permis</b>Quand la préfecture ou le juge vous le demande. Refuser de le restituer est aussi un délit.</li>
+      <li><b>Le bon médecin</b>Le contrôle médical se fait chez un médecin agréé par la préfecture, jamais votre médecin traitant, ou devant la commission médicale.</li>
+      <li><b>Le bon ordre</b>Le test psychotechnique se passe avant le contrôle médical. Son résultat reste valable 6 mois.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Les textes et formulaires officiels</h2>
+    <p class="chapeau">Ces pages font foi. En cas de doute sur votre situation, votre préfecture ou votre avocat vous renseigne.</p>
+    <ul class="liens-off"><li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34995" rel="noopener">Suspension administrative du permis</a><span>Service-public.fr : durées, contrôle médical, test psychotechnique</span></li><li><a href="https://www.justice.fr/fiche/suspension-judiciaire-permis-conduire" rel="noopener">Suspension judiciaire du permis</a><span>Justice.fr : suspension décidée par un juge</span></li><li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F21774" rel="noopener">Annulation du permis</a><span>Service-public.fr : infractions concernées, durée de l&#x27;interdiction</span></li><li><a href="https://www.justice.fr/fiche/invalidation-permis-conduire-retrait-points" rel="noopener">Invalidation pour solde de points nul</a><span>Justice.fr : délai de 6 mois ou 1 an, examens à repasser</span></li><li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F1685" rel="noopener">Récupération des points</a><span>Service-public.fr : délais et stages de récupération de points</span></li><li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R14006" rel="noopener">Avis médical (cerfa n° 14880)</a><span>Le formulaire à apporter au médecin agréé</span></li><li><a href="https://permisdeconduire.ants.gouv.fr/" rel="noopener">Demandes de permis en ligne (ANTS)</a><span>Restitution, nouveau permis, inscription à l&#x27;examen</span></li></ul>
+    <p class="encart"><b>Vous devez passer le test psychotechnique&nbsp;?</b> 100 €, réglés sur place, avec un psychologue déclaré en préfecture dans 14 départements. <a href="../#inscription">Demander un rendez-vous</a>.</p>
+  </div>
+</section>
+
+<section class="fond faq">
+  <div class="wrap">
+    <h2 style="margin-bottom:28px">Questions fréquentes</h2>
+    <details><summary>Puis-je conduire en attendant&nbsp;?</summary><p>Non. Conduire pendant une suspension, une annulation ou une invalidation est un délit puni de 2 ans d'emprisonnement et de 4 500 € d'amende.</p></details>
+    <details><summary>Dois-je repasser tout le permis&nbsp;?</summary><p>Pas toujours. Après une annulation ou une invalidation, vous ne repassez que le code si vous aviez le permis depuis au moins 3 ans, si la privation dure moins d'un an et si vous vous inscrivez dans les 9 mois. Sinon, vous repassez le code et la conduite.</p></details>
+    <details><summary>Mon médecin traitant peut-il faire la visite médicale&nbsp;?</summary><p>Non. Le contrôle se fait chez un médecin agréé par la préfecture, qui ne peut pas être votre médecin traitant, ou devant la commission médicale de la préfecture selon le motif. Votre courrier précise laquelle.</p></details>
+    <details><summary>Dans quel ordre faire les démarches&nbsp;?</summary><p>Test psychotechnique d'abord (s'il est exigé), puis contrôle médical, puis demande de permis sur le site de l'ANTS.</p></details>
+  </div>
+</section>
+
+<footer id="mentions">
+  <div class="wrap">
+    
+    <p><b>Qui fait quoi.</b> Les tests sont réalisés par le centre CITPC, dont le psychologue est déclaré en préfecture. Cette page d'inscription est éditée par LGBUSINESS33, partenaire du centre, qui lui transmet votre demande.</p>
+    <p><b>Éditeur.</b> LGBUSINESS33, Laurent Gouge, micro-entrepreneur, 18 avenue de la Somme, 33700 Mérignac. SIRET 901 634 907 00025. Contact : inscriptions@Lgbusiness33.onmicrosoft.com. <b>Hébergement.</b> GitHub Pages, GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
+    <p><b>Données personnelles.</b> Les informations du formulaire servent uniquement à organiser votre test. Elles sont transmises au centre de tests et à personne d'autre, et ne sont jamais vendues. Elles sont conservées 13 mois au plus, puis effacées. Vous pouvez y accéder, les faire corriger ou supprimer en écrivant à l'adresse ci-dessus.</p>
+    <p class="pro-lien"><a href="../demarches/">Retrait de permis : les démarches</a> · Vous êtes une auto-école, un centre de stages ou un avocat ? <a href="../partenaires/">Orientez vos clients vers le test</a>.</p>
+  </div>
+</footer>
+
+<div class="barre cachee" id="barre"><a class="btn" href="../#inscription">Demander un rendez-vous</a></div>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('ok') === '1') document.getElementById('merci').classList.add('visible');
+  // Code partenaire : rempli depuis le QR code (?p=…) et gardé si la personne revient plus tard
+  var code = (params.get('p') || '').toUpperCase().replace(/[^A-Z0-9-]/g, '').slice(0, 12);
+  try {
+    if (code) localStorage.setItem('psy_code', code);
+    else code = localStorage.getItem('psy_code') || '';
+  } catch (e) {}
+  var champ = document.getElementById('code');
+  if (code && champ) {
+    champ.value = code;
+    var r = document.getElementById('retour');
+    r.value = r.value.split('?')[0] + '?ok=1&p=' + encodeURIComponent(code);
+  }
+  // Sur téléphone : bouton fixe en bas, masqué quand le bouton du haut ou le formulaire sont à l'écran
+  var barre = document.getElementById('barre');
+  var zones = [document.querySelector('.hero .btn'), document.querySelector('.encart')];
+  var visibles = new Set();
+  if ('IntersectionObserver' in window && barre) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) visibles.add(e.target); else visibles.delete(e.target); });
+      barre.classList.toggle('cachee', visibles.size > 0);
+    }, { threshold: 0.05 });
+    zones.forEach(function (z) { if (z) obs.observe(z); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -194,9 +194,31 @@
   .atouts > div { border-top: 3px solid var(--bleu); padding-top: 20px; }
   .atouts h3 { margin-bottom: 8px; }
   .atouts p { color: var(--gris); margin: 0; font-size: 16px; }
+  .nav-top { display: flex; align-items: center; gap: 22px; }
+  .lien-guide { color: var(--encre); font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
+  .lien-guide:hover { color: var(--bleu); text-decoration: underline; }
+  .guide-cas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
+  .guide-cas > div { border-top: 3px solid var(--bleu); padding-top: 18px; }
+  .guide-cas h3 { margin-bottom: 8px; }
+  .guide-cas p { color: var(--gris); font-size: 16px; margin: 0 0 8px; }
+  .situation { border-top: 1px solid var(--ligne); padding: 32px 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; }
+  .situation:first-of-type { border-top: 0; }
+  .situation h3 { font-size: 22px; }
+  .situation ol, .situation ul { margin: 0; padding-left: 22px; }
+  .situation li { margin-bottom: 10px; }
+  .situation .note { color: var(--gris); font-size: 15.5px; margin-top: 14px; }
+  .obligations { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 48px; }
+  .obligations li { border-left: 3px solid var(--marine); padding: 2px 0 2px 18px; }
+  .obligations b { display: block; margin-bottom: 4px; }
+  .liens-off { list-style: none; padding: 0; margin: 28px 0 0; }
+  .liens-off li { border-bottom: 1px solid var(--ligne); padding: 12px 0; }
+  .liens-off a { font-weight: 600; color: var(--bleu); }
+  .liens-off span { color: var(--gris); font-size: 15px; display: block; }
+  .encart { border-left: 3px solid var(--bleu); padding: 6px 0 6px 22px; margin-top: 36px; }
   @media (max-width: 900px) {
-    .lieu, .apres, .atouts { grid-template-columns: 1fr; gap: 28px; }
+    .lieu, .apres, .atouts, .guide-cas, .situation, .obligations { grid-template-columns: 1fr; gap: 28px; }
   }
+  @media (max-width: 640px) { .lien-guide { font-size: 14px; } }
   @media (max-width: 520px) { .liens-deps { grid-template-columns: 1fr; } }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Test psychotechnique du permis de conduire", "serviceType": "Examen psychotechnique pour le contrôle médical de l'aptitude à la conduite", "areaServed": {"@type": "AdministrativeArea", "name": "Loire-Atlantique"}, "url": "https://laurentgouge-collab.github.io/lgbusiness33-site/test-psychotechnique/loire-atlantique/", "provider": {"@type": "Organization", "name": "CITPC"}, "offers": {"@type": "Offer", "price": "100", "priceCurrency": "EUR"}}</script>
@@ -213,7 +235,10 @@
       <svg width="34" height="26" viewBox="0 0 34 26" aria-hidden="true"><rect width="34" height="26" rx="4" fill="#0E518D"/><rect x="2.5" y="2.5" width="29" height="21" rx="2.5" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M10 15 L14 10 L18 15 M14 10 V20" fill="none" stroke="#fff" stroke-width="2"/></svg>
       Test psychotechnique du permis
     </a>
-    <a class="btn" href="#inscription">S'inscrire</a>
+    <nav class="nav-top">
+      <a class="lien-guide" href="../demarches/">Les démarches</a>
+      <a class="btn" href="#inscription">S'inscrire</a>
+    </nav>
   </div>
 </header>
 <div class="wrap fil"><a href="../">Test psychotechnique du permis</a> › Loire-Atlantique</div>
@@ -288,6 +313,7 @@
       <li><h3>La visite médicale</h3><p>Chez un médecin agréé par la préfecture de la Loire-Atlantique, qui ne doit pas être votre médecin traitant. La liste est publiée sur <a href="https://www.loire-atlantique.gouv.fr" rel="noopener">loire-atlantique.gouv.fr</a>. La consultation coûte 36 €.</p></li>
       <li><h3>La demande de permis</h3><p>Avec l'avis médical favorable, vous faites la demande en ligne sur le site de l'ANTS, selon votre situation : restitution, nouveau permis ou examen à repasser.</p></li>
     </ol>
+    <p class="encart">Suspension, annulation, invalidation : délais, examens à repasser, obligations. <a href="../demarches/">Toutes les démarches, situation par situation</a>.</p>
   </div>
 </section>
 
@@ -368,7 +394,7 @@
     <p><b>Qui fait quoi.</b> Les tests sont réalisés par le centre CITPC, dont le psychologue est déclaré en préfecture. Cette page d'inscription est éditée par LGBUSINESS33, partenaire du centre, qui lui transmet votre demande.</p>
     <p><b>Éditeur.</b> LGBUSINESS33, Laurent Gouge, micro-entrepreneur, 18 avenue de la Somme, 33700 Mérignac. SIRET 901 634 907 00025. Contact : inscriptions@Lgbusiness33.onmicrosoft.com. <b>Hébergement.</b> GitHub Pages, GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
     <p><b>Données personnelles.</b> Les informations du formulaire servent uniquement à organiser votre test. Elles sont transmises au centre de tests et à personne d'autre, et ne sont jamais vendues. Elles sont conservées 13 mois au plus, puis effacées. Vous pouvez y accéder, les faire corriger ou supprimer en écrivant à l'adresse ci-dessus.</p>
-    <p class="pro-lien">Vous êtes une auto-école, un centre de stages ou un avocat ? <a href="../partenaires/">Orientez vos clients vers le test</a>.</p>
+    <p class="pro-lien"><a href="../demarches/">Retrait de permis : les démarches</a> · Vous êtes une auto-école, un centre de stages ou un avocat ? <a href="../partenaires/">Orientez vos clients vers le test</a>.</p>
   </div>
 </footer>
 

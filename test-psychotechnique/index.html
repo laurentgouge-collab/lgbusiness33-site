@@ -3,337 +3,371 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Test psychotechnique du permis — inscription | Gironde, Ouest et Sud-Ouest</title>
-<meta name="description" content="Permis suspendu, annulé ou invalidé ? Inscrivez-vous à votre test psychotechnique en 2 minutes : psychologue déclaré en préfecture dans 14 départements, 100 €, au centre ou en session près de chez vous.">
+<title>Test psychotechnique du permis : inscription en ligne</title>
+<meta name="description" content="Permis suspendu, annulé ou invalidé ? Passez votre test psychotechnique avec un psychologue déclaré en préfecture dans 14 départements. 100 €. Inscription en une minute, le centre vous rappelle.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #16213e; --navy-2: #1f2d52; --gold: #c89b3c; --gold-strong: #a67529; --tint: #f2e6cd;
-    --bg: #f7f4ee; --surface: #ffffff; --line: #e6e0d2; --ink: #201d16; --soft: #5c5648;
-    --ok: #2f6b4f; --radius: 14px;
-    --font: 'Poppins', -apple-system, 'Segoe UI', Arial, sans-serif;
+    --asphalte: #2A2D33;
+    --asphalte-2: #3B3F47;
+    --bleu: #0E518D;
+    --bleu-2: #0A3F70;
+    --jaune: #F5C400;
+    --beton: #EEF0F2;
+    --blanc: #FFFFFF;
+    --encre: #1C1F24;
+    --gris: #5A616C;
+    --ligne: #D6DBE1;
+    --rouge: #C8102E;
+    --cond: "Barlow Condensed", "Arial Narrow", sans-serif;
+    --texte: "Barlow", "Segoe UI", Arial, sans-serif;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; font-family: var(--font); color: var(--ink); background: var(--bg); line-height: 1.6; font-size: 16px; }
-  a { color: var(--navy); }
-  .wrap { width: min(1080px, 100% - 40px); margin-inline: auto; }
-  .eyebrow { display: inline-block; font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
-  h1, h2, h3 { line-height: 1.2; margin: 0; color: var(--navy); }
-  h2 { font-size: clamp(24px, 3.2vw, 32px); font-weight: 700; }
-  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: #1b1406; font-weight: 600; text-decoration: none;
-         padding: 13px 22px; border-radius: 10px; border: 0; font: inherit; font-weight: 600; cursor: pointer; transition: transform .15s, box-shadow .15s; }
-  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(200,155,60,.35); }
-  .btn.ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.45); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; font-family: var(--texte); font-size: 17px; line-height: 1.55; color: var(--encre); background: var(--beton); }
+  a { color: var(--bleu); }
+  :focus-visible { outline: 3px solid var(--jaune); outline-offset: 2px; }
+  .wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+  h1, h2, h3 { font-family: var(--cond); font-weight: 700; line-height: 1; margin: 0; letter-spacing: .005em; }
+  h2 { font-size: clamp(34px, 4.6vw, 52px); }
+  h3 { font-size: 26px; font-weight: 600; }
+  p { margin: 0 0 1em; }
 
-  header.top { background: var(--navy); color: #fff; }
-  .top-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
-  .brand { font-weight: 600; font-size: 15px; letter-spacing: .01em; color: #fff; text-decoration: none; }
-  .brand span { color: var(--gold); }
-  .top-row .btn { padding: 9px 16px; font-size: 14px; }
+  /* Bouton principal : jaune signalisation */
+  .btn { display: inline-block; font-family: var(--cond); font-weight: 700; font-size: 22px; letter-spacing: .02em;
+         background: var(--jaune); color: var(--encre); text-decoration: none; border: 0; border-radius: 6px;
+         padding: 14px 28px 13px; cursor: pointer; box-shadow: 0 3px 0 #B99300; }
+  .btn:hover { background: #FFD21F; }
+  .btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #B99300; }
 
-  .hero { background: var(--navy); color: #fff; padding: 36px 0 64px; position: relative; overflow: hidden; }
-  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--gold); }
-  .hero-grid { display: grid; grid-template-columns: 1.25fr .9fr; gap: 48px; align-items: center; }
-  .hero h1 { color: #fff; font-size: clamp(32px, 5vw, 50px); font-weight: 700; margin: 12px 0 16px; letter-spacing: -.01em; }
-  .hero p.lead { color: #dde2ee; font-size: 18px; font-weight: 300; max-width: 560px; margin: 0 0 26px; }
-  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
-  .facts { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; color: #cfd6e6; font-size: 14px; }
-  .facts li::before { content: "✓"; color: var(--gold); font-weight: 700; margin-right: 7px; }
-  .price-card { background: var(--surface); color: var(--ink); border-radius: var(--radius); padding: 26px; box-shadow: 0 24px 60px rgba(0,0,0,.25); }
-  .price-card .amount { font-size: 54px; font-weight: 700; color: var(--navy); line-height: 1; }
-  .price-card .amount small { font-size: 15px; font-weight: 500; color: var(--soft); margin-left: 6px; }
-  .price-card ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 10px; font-size: 14.5px; }
-  .price-card li { display: flex; gap: 10px; }
-  .price-card li b { color: var(--navy); }
-  .dot { flex: 0 0 22px; height: 22px; border-radius: 50%; background: var(--tint); color: var(--gold-strong); display: grid; place-items: center; font-size: 12px; font-weight: 700; }
+  /* En-tête : plaque bleue façon panneau */
+  .top { background: var(--asphalte); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .plaque { display: inline-flex; align-items: center; gap: 10px; background: var(--bleu); color: var(--blanc);
+            font-family: var(--cond); font-weight: 600; font-size: 20px; padding: 6px 14px; border-radius: 6px;
+            box-shadow: inset 0 0 0 2px var(--bleu), inset 0 0 0 4px var(--blanc); text-decoration: none; }
+  .top nav a { color: var(--blanc); font-family: var(--cond); font-weight: 600; font-size: 20px; text-decoration: none; }
+  .top nav a:hover { color: var(--jaune); }
 
-  .partner-banner { display: none; background: var(--tint); color: var(--navy); font-size: 14.5px; padding: 10px 0; }
-  .partner-banner.show { display: block; }
+  /* Hero */
+  .hero { background: var(--asphalte); color: var(--blanc); overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: end; padding-top: 28px; }
+  .hero-text { padding-bottom: 56px; }
+  .hero h1 { font-size: clamp(54px, 8.6vw, 118px); line-height: .9; margin-bottom: 26px; }
+  .hero .lead { font-size: 21px; color: #D5DAE1; max-width: 33ch; margin-bottom: 30px; }
+  .hero .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 26px; }
+  .prix { font-family: var(--cond); font-size: 22px; color: var(--blanc); }
+  .prix strong { font-size: 40px; font-weight: 700; color: var(--jaune); margin-right: 6px; }
+  .marquage { height: 6px; margin: 42px 0 18px; background: repeating-linear-gradient(90deg, var(--blanc) 0 56px, transparent 56px 96px); opacity: .9; }
+  .garanties { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0; padding: 0; list-style: none; font-size: 16px; color: #C3C9D2; }
+  .road { display: block; width: 100%; height: auto; max-height: 560px; }
 
-  section { padding: 72px 0; }
-  .section-head { max-width: 680px; margin-bottom: 34px; }
-  .section-head p { color: var(--soft); margin: 10px 0 0; }
-  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
-  .card h3 { font-size: 18px; margin-bottom: 8px; }
-  .card p { margin: 0; color: var(--soft); font-size: 15px; }
-  .card .tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--gold-strong); background: var(--tint); border-radius: 99px; padding: 3px 10px; margin-bottom: 12px; }
-  .note { margin-top: 18px; font-size: 14px; color: var(--soft); }
+  /* Sections */
+  section { padding: 84px 0; }
+  .intro { max-width: 60ch; color: var(--gris); margin-top: 16px; }
 
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: s; }
-  .step { position: relative; padding: 24px 24px 24px 76px; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--line); }
-  .step::before { counter-increment: s; content: counter(s); position: absolute; left: 22px; top: 22px; width: 38px; height: 38px; border-radius: 50%;
-                  background: var(--navy); color: #fff; font-weight: 700; display: grid; place-items: center; }
-  .step h3 { font-size: 17px; margin-bottom: 4px; }
-  .step p { margin: 0; color: var(--soft); font-size: 15px; }
-  .day { margin-top: 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-  .day div { border-left: 3px solid var(--gold); padding: 4px 0 4px 14px; font-size: 14.5px; color: var(--soft); }
-  .day b { display: block; color: var(--navy); font-size: 15px; }
+  /* Cas obligatoires : séparés par un marquage en pointillés */
+  .cas { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 44px; }
+  .cas > div { padding: 4px 30px 4px 30px; border-left: 4px dashed #B7BEC7; }
+  .cas > div:first-child { padding-left: 0; border-left: 0; }
+  .cas h3 { color: var(--bleu); margin-bottom: 12px; }
+  .cas p { color: var(--gris); margin: 0; }
+  .note { margin-top: 36px; padding: 16px 20px; background: var(--blanc); border-left: 6px solid var(--jaune); color: var(--gris); font-size: 16px; max-width: 80ch; }
 
-  .zone { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .zone-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: start; }
-  .deps { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-  .deps li { border: 1px solid var(--line); background: var(--bg); border-radius: 99px; padding: 6px 13px; font-size: 14px; }
-  .deps li b { color: var(--navy); }
-  .zone p { color: var(--soft); }
+  /* Étapes : bornes kilométriques */
+  .etapes { background: var(--blanc); }
+  .bornes { list-style: none; margin: 48px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; counter-reset: borne; }
+  .bornes li { counter-increment: borne; }
+  .borne { width: 64px; height: 78px; background: var(--blanc); border: 2px solid var(--encre); border-radius: 32px 32px 4px 4px;
+           position: relative; overflow: hidden; margin-bottom: 18px; display: grid; place-items: end center; padding-bottom: 8px; }
+  .borne::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 26px; background: var(--rouge); }
+  .borne::after { content: counter(borne); font-family: var(--cond); font-weight: 700; font-size: 34px; line-height: 1; position: relative; }
+  .bornes h3 { margin-bottom: 8px; }
+  .bornes p { color: var(--gris); margin: 0; }
+  .jour { margin: 56px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 2px solid var(--encre); }
+  .jour div { padding: 18px 20px 0 0; }
+  .jour dt { font-family: var(--cond); font-weight: 600; font-size: 21px; }
+  .jour dd { margin: 4px 0 0; color: var(--gris); font-size: 16px; }
 
-  .form-wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: 44px; align-items: start; }
-  .reassure { display: grid; gap: 14px; margin-top: 22px; }
-  .reassure div { display: flex; gap: 12px; font-size: 15px; color: var(--soft); }
-  form.card { padding: 28px; }
-  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px; }
-  label { font-size: 14px; font-weight: 500; color: var(--navy); }
-  .hint { font-weight: 400; color: var(--soft); font-size: 12.5px; }
-  input[type=text], input[type=tel], input[type=email], select {
-    font: inherit; font-size: 15.5px; padding: 12px 13px; border: 1.5px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); width: 100%; }
-  input:focus, select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,155,60,.18); }
-  .choices { display: grid; gap: 10px; }
-  .choice { display: flex; gap: 12px; align-items: flex-start; border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; background: #fff; }
-  .choice input { margin-top: 5px; accent-color: var(--navy); }
-  .choice b { display: block; color: var(--navy); font-weight: 600; font-size: 15px; }
-  .choice span { font-size: 13.5px; color: var(--soft); }
-  .choice:has(input:checked) { border-color: var(--navy); background: #f4f6fb; }
-  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: var(--soft); margin: 6px 0 18px; }
-  .consent input { margin-top: 4px; accent-color: var(--navy); }
-  .consent label { font-weight: 400; color: var(--soft); font-size: 13.5px; }
-  .submit-note { font-size: 12.5px; color: var(--soft); margin-top: 10px; }
-  .hp { position: absolute; left: -5000px; }
+  /* Départements : panneau de direction */
+  .zone .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
+  .panneau { background: var(--bleu); color: var(--blanc); border-radius: 14px; padding: 30px 34px;
+             box-shadow: inset 0 0 0 6px var(--bleu), inset 0 0 0 9px var(--blanc); }
+  .panneau ul { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 34px; }
+  .panneau li { font-family: var(--cond); font-weight: 600; font-size: 24px; line-height: 1.5; break-inside: avoid; white-space: nowrap; }
+  .panneau li span { display: inline-block; min-width: 34px; color: #B9D2EA; font-weight: 500; }
 
-  .faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; }
-  .faq summary { cursor: pointer; font-weight: 600; color: var(--navy); list-style: none; }
-  .faq summary::after { content: "+"; float: right; color: var(--gold); font-weight: 700; }
-  .faq details[open] summary::after { content: "–"; }
-  .faq details p { color: var(--soft); margin: 10px 0 0; font-size: 15px; }
+  /* Formulaire */
+  .inscription { background: var(--asphalte); color: var(--blanc); }
+  .inscription .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
+  .inscription .intro { color: #C3C9D2; }
+  .apres { margin: 30px 0 0; padding: 0 0 0 22px; color: #D5DAE1; }
+  .apres li { margin-bottom: 10px; padding-left: 4px; }
+  .apres li::marker { font-family: var(--cond); font-weight: 700; color: var(--jaune); }
+  form { background: var(--blanc); color: var(--encre); border-radius: 10px; padding: 32px; }
+  .champ { margin-bottom: 18px; }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label { display: block; font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+  .aide { font-weight: 400; color: var(--gris); }
+  input[type=text], input[type=tel], input[type=email], select, textarea {
+    width: 100%; font: inherit; font-size: 17px; color: var(--encre); background: #F7F8F9;
+    border: 2px solid var(--ligne); border-radius: 6px; padding: 12px 14px; }
+  textarea { min-height: 96px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--bleu); background: var(--blanc); }
+  .accord { display: flex; gap: 12px; align-items: flex-start; font-size: 14.5px; color: var(--gris); margin: 6px 0 22px; }
+  .accord input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--bleu); flex: none; }
+  .accord label { font-weight: 400; font-size: 14.5px; margin: 0; }
+  form .btn { width: 100%; font-size: 24px; }
+  .sous-bouton { font-size: 14px; color: var(--gris); margin: 12px 0 0; text-align: center; }
+  .piege { position: absolute; left: -9999px; }
 
-  .thanks { display: none; background: var(--ok); color: #fff; padding: 14px 0; font-weight: 500; }
-  .thanks.show { display: block; }
-  footer { background: var(--navy); color: #b7bdcc; font-size: 13px; padding: 34px 0; }
-  footer p { margin: 0 0 10px; }
-  footer a { color: #e3c27d; }
+  /* Questions */
+  .faq .wrap { max-width: 860px; }
+  details { border-bottom: 2px solid var(--ligne); }
+  summary { cursor: pointer; list-style: none; padding: 20px 40px 20px 0; position: relative;
+            font-family: var(--cond); font-weight: 600; font-size: 25px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 6px; top: 14px; font-size: 32px; color: var(--bleu); }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--gris); margin: -4px 0 22px; max-width: 70ch; }
 
-  @media (max-width: 860px) {
-    .hero-grid, .zone-grid, .form-wrap { grid-template-columns: 1fr; gap: 28px; }
-    .cards, .steps { grid-template-columns: 1fr; }
-    .day { grid-template-columns: 1fr 1fr; }
-    section { padding: 52px 0; }
+  footer { background: var(--encre); color: #A9B0BA; font-size: 14px; padding: 40px 0 96px; }
+  footer p { max-width: 90ch; }
+  footer b { color: var(--blanc); font-weight: 600; }
+
+  /* Confirmation après envoi */
+  .merci { display: none; background: var(--bleu); color: var(--blanc); padding: 18px 0; font-size: 18px; }
+  .merci.visible { display: block; }
+  .merci b { font-family: var(--cond); font-size: 24px; display: block; }
+
+  /* Barre d'inscription sur téléphone */
+  .barre { display: none; }
+
+  @media (max-width: 900px) {
+    body { font-size: 16.5px; }
+    .hero .wrap, .zone .wrap, .inscription .wrap { grid-template-columns: 1fr; gap: 28px; }
+    .hero-text { padding-bottom: 0; }
+    .road { max-height: 300px; width: auto; margin: 0 auto; }
+    .cas, .bornes { grid-template-columns: 1fr; gap: 28px; }
+    .cas > div { padding: 0 0 0 20px; border-left: 4px dashed #B7BEC7; }
+    .cas > div:first-child { padding-left: 20px; border-left: 4px dashed #B7BEC7; }
+    .jour { grid-template-columns: 1fr 1fr; }
+    section { padding: 60px 0; }
+    form { padding: 22px; }
+    .barre { display: block; position: fixed; left: 0; right: 0; bottom: 0; padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+             background: var(--asphalte); box-shadow: 0 -2px 0 rgba(0,0,0,.15); z-index: 10; transition: transform .2s; }
+    .barre .btn { width: 100%; text-align: center; }
+    .barre.cachee { transform: translateY(110%); }
   }
-  @media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } .top-row .btn { display: none; } }
+  @media (max-width: 520px) { .duo { grid-template-columns: 1fr; gap: 0; } .top nav { display: none; } .panneau ul { columns: 1; } }
 </style>
 </head>
 <body>
 
-<div class="thanks" id="thanks" role="status"><div class="wrap">Merci, votre demande est bien enregistrée. Vous allez recevoir un email avec votre numéro de dossier, et le centre vous rappelle rapidement.</div></div>
+<div class="merci" id="merci" role="status"><div class="wrap"><b>Demande envoyée.</b>Vous allez recevoir un email avec votre numéro de dossier. Le centre vous appelle pour fixer le rendez-vous.</div></div>
 
 <header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="#">Test psychotechnique <span>du permis</span></a>
-    <a class="btn" href="#inscription">Je m'inscris</a>
+  <div class="wrap">
+    <a class="plaque" href="#">Test psychotechnique du permis</a>
+    <nav><a href="#inscription">S'inscrire</a></nav>
   </div>
 </header>
 
-<div class="partner-banner" id="partner-banner"><div class="wrap">Code partenaire <b id="partner-code"></b> appliqué : votre établissement vous a orienté ici, rien ne change pour vous.</div></div>
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Permis suspendu, annulé ou invalidé ?</span>
-      <h1>Votre test psychotechnique, près de chez vous.</h1>
-      <p class="lead">Il est obligatoire avant la visite médicale pour récupérer ou repasser votre permis. Inscrivez-vous en 2 minutes : le centre vous rappelle pour fixer votre rendez-vous.</p>
-      <div class="cta-row">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="hero-text">
+      <h1>Permis suspendu, annulé ou invalidé&nbsp;?</h1>
+      <p class="lead">Passez votre test psychotechnique près de chez vous. Inscrivez-vous en une minute, le centre vous rappelle pour fixer le rendez-vous.</p>
+      <div class="actions">
         <a class="btn" href="#inscription">Je m'inscris</a>
-        <a class="btn ghost" href="#concerne">Suis-je concerné ?</a>
+        <span class="prix"><strong>100&nbsp;€</strong>le test, réglé sur place</span>
       </div>
-      <ul class="facts">
+      <div class="marquage" aria-hidden="true"></div>
+      <ul class="garanties">
         <li>Psychologue déclaré en préfecture</li>
         <li>14 départements</li>
-        <li>Rappel rapide</li>
+        <li>Rappel sous 48 heures ouvrées</li>
       </ul>
     </div>
-    <aside class="price-card" aria-label="Tarif">
-      <div class="amount">100 €<small>tarif unique</small></div>
-      <ul>
-        <li><span class="dot">1</span><span><b>Inscription en ligne</b>, sans frais</span></li>
-        <li><span class="dot">2</span><span><b>Rappel du centre</b> pour fixer le rendez-vous</span></li>
-        <li><span class="dot">3</span><span><b>Test d'environ 1 heure</b>, au centre ou en session près de chez vous</span></li>
-      </ul>
-    </aside>
+    <div class="hero-visuel"><svg class="road" viewBox="0 0 560 600" role="img" aria-label="Route vue du conducteur, avec un panneau indiquant la visite médicale et le permis de conduire" xmlns="http://www.w3.org/2000/svg"><polygon points="211,170 219,170 540,600 -210,600" fill="#3B3F47"/><line x1="212" y1="170" x2="-174" y2="600" stroke="#E9ECEF" stroke-width="5"/><line x1="218" y1="170" x2="504" y2="600" stroke="#E9ECEF" stroke-width="5"/><polygon points="207.4,610.0 222.6,610.0 220.8,504.5 209.2,504.5" fill="#F4F6F8"/><polygon points="210.4,426.2 219.6,426.2 218.9,386.5 211.1,386.5" fill="#F4F6F8"/><polygon points="211.6,356.6 218.4,356.6 218.0,332.7 212.0,332.7" fill="#F4F6F8"/><polygon points="212.2,314.6 217.8,314.6 217.5,297.8 212.5,297.8" fill="#F4F6F8"/><polygon points="212.7,284.9 217.3,284.9 217.1,272.1 212.9,272.1" fill="#F4F6F8"/><polygon points="213.1,262.1 216.9,262.1 216.7,251.8 213.3,251.8" fill="#F4F6F8"/><polygon points="213.4,243.6 216.6,243.6 216.5,234.8 213.5,234.8" fill="#F4F6F8"/><polygon points="213.7,227.7 216.3,227.7 216.2,220.0 213.8,220.0" fill="#F4F6F8"/><polygon points="213.9,213.8 216.1,213.8 216.0,206.8 214.0,206.8" fill="#F4F6F8"/><polygon points="214.1,201.0 215.9,201.0 215.8,194.5 214.2,194.5" fill="#F4F6F8"/><polygon points="214.3,189.2 215.7,189.2 215.6,183.0 214.4,183.0" fill="#F4F6F8"/><polygon points="214.5,177.9 215.5,177.9 215.5,174.0 214.5,174.0" fill="#F4F6F8"/><rect x="71.0" y="261.7" width="6.8" height="38.3" fill="#E9ECEF" rx="1.7"/><rect x="71.0" y="266.3" width="6.8" height="5.4" fill="#1C1F24"/><rect x="126.0" y="224.5" width="5.0" height="25.5" fill="#E9ECEF" rx="1.2"/><rect x="126.0" y="227.6" width="5.0" height="3.6" fill="#1C1F24"/><rect x="156.8" y="203.7" width="3.9" height="18.3" fill="#E9ECEF" rx="1.0"/><rect x="156.8" y="205.9" width="3.9" height="2.6" fill="#1C1F24"/><rect x="175.5" y="191.0" width="3.3" height="14.0" fill="#E9ECEF" rx="0.8"/><rect x="175.5" y="192.7" width="3.3" height="2.0" fill="#1C1F24"/><rect x="187.6" y="182.9" width="2.9" height="11.1" fill="#E9ECEF" rx="0.7"/><rect x="187.6" y="184.2" width="2.9" height="1.6" fill="#1C1F24"/><rect x="266.9" y="211.1" width="4.3" height="20.9" fill="#E9ECEF" rx="1.1"/><rect x="266.9" y="213.6" width="4.3" height="2.9" fill="#1C1F24"/><rect x="244.7" y="191.8" width="3.3" height="14.2" fill="#E9ECEF" rx="0.8"/><rect x="244.7" y="193.5" width="3.3" height="2.0" fill="#1C1F24"/><rect x="232.8" y="181.4" width="2.8" height="10.6" fill="#E9ECEF" rx="0.7"/><rect x="232.8" y="182.6" width="2.8" height="1.5" fill="#1C1F24"/><rect x="471" y="150" width="11" height="330" fill="#A3AAB3"/><rect x="466" y="476" width="21" height="6" fill="#80868F"/><g transform="translate(318,46)"><rect width="236" height="118" rx="10" fill="#0E518D"/><rect x="6" y="6" width="224" height="106" rx="6" fill="none" stroke="#FFFFFF" stroke-width="3"/><path d="M30 46 L42 30 L54 46 M42 30 V62" fill="none" stroke="#FFFFFF" stroke-width="5"/><text x="68" y="53" font-family="Barlow Condensed, 'Arial Narrow', sans-serif" font-weight="600" font-size="28" fill="#FFFFFF" textLength="146" lengthAdjust="spacingAndGlyphs">Visite médicale</text><path d="M30 92 L42 76 L54 92 M42 76 V104" fill="none" stroke="#FFFFFF" stroke-width="5"/><text x="68" y="99" font-family="Barlow Condensed, 'Arial Narrow', sans-serif" font-weight="600" font-size="28" fill="#FFFFFF" textLength="146" lengthAdjust="spacingAndGlyphs">Permis de conduire</text></g><g transform="translate(346,176)"><rect width="180" height="42" rx="6" fill="#FFFFFF"/><text x="90" y="29" text-anchor="middle" font-family="Barlow Condensed, 'Arial Narrow', sans-serif" font-weight="700" font-size="22" fill="#1C1F24" textLength="152" lengthAdjust="spacingAndGlyphs">Test psychotechnique</text></g></svg></div>
   </div>
 </section>
 
 <section id="concerne">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Êtes-vous concerné ?</span>
-      <h2>Le test est obligatoire dans trois situations</h2>
-      <p>Il se passe avant la visite médicale chez un médecin agréé, qui décide ensuite de votre aptitude à conduire.</p>
+    <h2>Le test est obligatoire dans trois cas</h2>
+    <p class="intro">Il se passe avant la visite médicale chez le médecin agréé, qui décide ensuite si vous pouvez reprendre le volant.</p>
+    <div class="cas">
+      <div><h3>Suspension de 6 mois ou plus</h3><p>Suspension décidée par la préfecture ou par un juge, quel qu'en soit le motif.</p></div>
+      <div><h3>Annulation du permis</h3><p>Le permis a été annulé par décision de justice : le test vient avant de le repasser.</p></div>
+      <div><h3>Invalidation, 0 point</h3><p>Vous avez perdu tous vos points : le test fait partie des étapes pour obtenir un nouveau permis.</p></div>
     </div>
-    <div class="cards">
-      <div class="card"><span class="tag">Suspension</span><h3>6 mois ou plus</h3><p>Suspension administrative ou judiciaire d'une durée de 6 mois ou plus, quel qu'en soit le motif.</p></div>
-      <div class="card"><span class="tag">Annulation</span><h3>Décision de justice</h3><p>Votre permis a été annulé : vous devez passer le test avant de pouvoir repasser votre permis.</p></div>
-      <div class="card"><span class="tag">Invalidation</span><h3>Solde de points nul</h3><p>Vous avez perdu tous vos points : le test fait partie des étapes pour obtenir un nouveau permis.</p></div>
-    </div>
-    <p class="note">Suspension de moins de 6 mois : le test n'est demandé que si le médecin agréé le juge nécessaire. Votre courrier de la préfecture ou la décision de justice précise les examens à faire ; en cas de doute, le centre vous renseigne au téléphone.</p>
+    <p class="note">Pour une suspension de moins de 6 mois, le test n'est demandé que si le médecin agréé le juge utile. Votre courrier de la préfecture ou la décision de justice indique les examens à faire. En cas de doute, le centre vous renseigne au téléphone.</p>
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="etapes">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Comment ça se passe</span>
-      <h2>Trois étapes, sans démarche compliquée</h2>
-    </div>
-    <div class="steps">
-      <div class="step"><h3>Vous vous inscrivez</h3><p>Le formulaire ci-dessous prend 2 minutes. Vous recevez aussitôt un numéro de dossier par email.</p></div>
-      <div class="step"><h3>Le centre vous rappelle</h3><p>Il fixe avec vous la date et le lieu : au centre, ou lors d'une session près de chez vous.</p></div>
-      <div class="step"><h3>Vous passez le test</h3><p>Le résultat est établi pour le médecin agréé qui fera votre visite médicale.</p></div>
-    </div>
-    <div class="day">
-      <div><b>Durée</b>environ 1 heure</div>
-      <div><b>Contenu</b>exercices sur ordinateur et entretien avec le psychologue</div>
-      <div><b>À apporter</b>pièce d'identité et courrier de la préfecture ou décision de justice</div>
-      <div><b>Après</b>visite médicale chez un médecin agréé</div>
-    </div>
+    <h2>Comment ça se passe</h2>
+    <ol class="bornes">
+      <li><div class="borne" aria-hidden="true"></div><h3>Vous vous inscrivez</h3><p>Le formulaire prend une minute. Vous recevez aussitôt votre numéro de dossier par email.</p></li>
+      <li><div class="borne" aria-hidden="true"></div><h3>Le centre vous appelle</h3><p>Il fixe avec vous la date et le lieu du test, au plus près de chez vous.</p></li>
+      <li><div class="borne" aria-hidden="true"></div><h3>Vous passez le test</h3><p>Le résultat est établi pour le médecin agréé qui fera votre visite médicale.</p></li>
+    </ol>
+    <dl class="jour">
+      <div><dt>Durée</dt><dd>Environ une heure</dd></div>
+      <div><dt>Déroulement</dt><dd>Exercices sur ordinateur, puis entretien avec le psychologue</dd></div>
+      <div><dt>À apporter</dt><dd>Pièce d'identité et courrier de la préfecture ou décision de justice</dd></div>
+      <div><dt>Ensuite</dt><dd>Visite médicale chez un médecin agréé, dans les 6 mois</dd></div>
+    </dl>
   </div>
 </section>
 
 <section class="zone">
-  <div class="wrap zone-grid">
+  <div class="wrap">
     <div>
-      <span class="eyebrow">Où passer le test ?</span>
-      <h2>Au centre, ou près de chez vous</h2>
-      <p>Le psychologue est déclaré auprès des préfectures de 14 départements. Vous pouvez passer le test au centre en Gironde, ou demander une session près de chez vous : elle est organisée dès qu'un petit groupe est inscrit dans votre secteur. Si vous préférez ne pas attendre, vous pouvez toujours venir au centre.</p>
+      <h2>Un psychologue déclaré dans 14 départements</h2>
+      <p class="intro">Le psychologue est déclaré auprès de la préfecture de chacun de ces départements. Le centre vous propose un rendez-vous au plus près de chez vous.</p>
     </div>
-    <ul class="deps" aria-label="Départements couverts">
-      <li><b>16</b> Charente</li><li><b>17</b> Charente-Maritime</li><li><b>24</b> Dordogne</li><li><b>31</b> Haute-Garonne</li>
-      <li><b>33</b> Gironde</li><li><b>40</b> Landes</li><li><b>44</b> Loire-Atlantique</li><li><b>49</b> Maine-et-Loire</li>
-      <li><b>56</b> Morbihan</li><li><b>64</b> Pyrénées-Atlantiques</li><li><b>79</b> Deux-Sèvres</li><li><b>85</b> Vendée</li>
-      <li><b>86</b> Vienne</li><li><b>87</b> Haute-Vienne</li>
-    </ul>
+    <div class="panneau">
+      <ul>
+        <li><span>16</span>Charente</li>
+        <li><span>17</span>Charente-Maritime</li>
+        <li><span>24</span>Dordogne</li>
+        <li><span>31</span>Haute-Garonne</li>
+        <li><span>33</span>Gironde</li>
+        <li><span>40</span>Landes</li>
+        <li><span>44</span>Loire-Atlantique</li>
+        <li><span>49</span>Maine-et-Loire</li>
+        <li><span>56</span>Morbihan</li>
+        <li><span>64</span>Pyrénées-Atlantiques</li>
+        <li><span>79</span>Deux-Sèvres</li>
+        <li><span>85</span>Vendée</li>
+        <li><span>86</span>Vienne</li>
+        <li><span>87</span>Haute-Vienne</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section id="inscription">
-  <div class="wrap form-wrap">
+<section class="inscription" id="inscription">
+  <div class="wrap">
     <div>
-      <span class="eyebrow">Inscription</span>
-      <h2>Demandez votre rendez-vous</h2>
-      <p style="color:var(--soft)">Pas besoin d'expliquer votre situation ici : le psychologue en parlera avec vous, en toute confidentialité.</p>
-      <div class="reassure">
-        <div><span class="dot">✓</span><span>Un numéro de dossier vous est envoyé par email dès l'envoi du formulaire.</span></div>
-        <div><span class="dot">✓</span><span>Le centre vous rappelle pour fixer la date. Vous ne payez rien à l'inscription.</span></div>
-        <div><span class="dot">✓</span><span>Vos coordonnées servent uniquement à organiser votre test.</span></div>
-      </div>
+      <h2>Demander un rendez-vous</h2>
+      <p class="intro">Inutile d'expliquer votre situation ici : vous en parlerez avec le psychologue, en toute confidentialité.</p>
+      <ol class="apres">
+        <li>Vous recevez votre numéro de dossier par email.</li>
+        <li>Le centre vous appelle pour fixer le rendez-vous.</li>
+        <li>Vous réglez 100 € le jour du test. Rien à payer en ligne.</li>
+      </ol>
     </div>
 
-    <form class="card" id="form" action="https://api.web3forms.com/submit" method="POST">
+    <form id="formulaire" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="04d7e6bc-5058-4f0b-9048-98d95f636504">
       <input type="hidden" name="subject" value="[TEST-PSY] Nouvelle demande de test psychotechnique">
       <input type="hidden" name="from_name" value="Inscription test psychotechnique">
-      <input type="hidden" name="redirect" id="redirect" value="https://laurentgouge-collab.github.io/lgbusiness33-site/test-psychotechnique/?ok=1">
-      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="redirect" id="retour" value="https://laurentgouge-collab.github.io/lgbusiness33-site/test-psychotechnique/?ok=1">
+      <input type="checkbox" name="botcheck" class="piege" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-      <div class="field">
-        <label for="f-name">Nom et prénom</label>
-        <input id="f-name" name="name" type="text" required autocomplete="name">
+      <div class="champ">
+        <label for="nom">Nom et prénom</label>
+        <input id="nom" name="name" type="text" required autocomplete="name">
       </div>
-      <div class="row2">
-        <div class="field">
-          <label for="f-phone">Téléphone</label>
-          <input id="f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" pattern="[0-9 +().\-]{10,20}" placeholder="06 12 34 56 78">
+      <div class="duo">
+        <div class="champ">
+          <label for="tel">Téléphone</label>
+          <input id="tel" name="phone" type="tel" required autocomplete="tel" inputmode="tel" pattern="[0-9 +().\-]{10,20}" placeholder="06 12 34 56 78">
         </div>
-        <div class="field">
-          <label for="f-email">Email</label>
-          <input id="f-email" name="email" type="email" required autocomplete="email">
+        <div class="champ">
+          <label for="mail">Email</label>
+          <input id="mail" name="email" type="email" required autocomplete="email">
         </div>
       </div>
-      <div class="row2">
-        <div class="field">
-          <label for="f-dep">Département</label>
-          <select id="f-dep" name="departement" required>
-            <option value="">Choisir…</option>
-            <option>33 - Gironde</option><option>24 - Dordogne</option><option>40 - Landes</option>
-            <option>16 - Charente</option><option>17 - Charente-Maritime</option><option>31 - Haute-Garonne</option>
+      <div class="duo">
+        <div class="champ">
+          <label for="dep">Votre département</label>
+          <select id="dep" name="departement" required>
+            <option value="">Choisir</option>
+            <option>16 - Charente</option><option>17 - Charente-Maritime</option><option>24 - Dordogne</option>
+            <option>31 - Haute-Garonne</option><option>33 - Gironde</option><option>40 - Landes</option>
             <option>44 - Loire-Atlantique</option><option>49 - Maine-et-Loire</option><option>56 - Morbihan</option>
             <option>64 - Pyrénées-Atlantiques</option><option>79 - Deux-Sèvres</option><option>85 - Vendée</option>
             <option>86 - Vienne</option><option>87 - Haute-Vienne</option><option>Autre département</option>
           </select>
         </div>
-        <div class="field">
-          <label for="f-city">Ville</label>
-          <input id="f-city" name="ville" type="text" required autocomplete="address-level2">
+        <div class="champ">
+          <label for="code">Code partenaire <span class="aide">(facultatif)</span></label>
+          <input id="code" name="code" type="text" maxlength="12" autocomplete="off" placeholder="Indiqué sur le flyer">
         </div>
       </div>
-      <div class="field">
-        <label>Où souhaitez-vous passer le test ?</label>
-        <div class="choices">
-          <label class="choice"><input type="radio" name="lieu" value="Au centre (Gironde), dès que possible" checked><span><b>Au centre, dès que possible</b><span>Rendez-vous au centre en Gironde.</span></span></label>
-          <label class="choice"><input type="radio" name="lieu" value="Session près de chez moi"><span><b>Lors d'une session près de chez moi</b><span>Organisée dès qu'un petit groupe est inscrit dans votre secteur.</span></span></label>
-        </div>
+      <div class="champ">
+        <label for="remarques">Remarques <span class="aide">(facultatif)</span></label>
+        <textarea id="remarques" name="message" maxlength="1000" placeholder="Par exemple : à rappeler après 17 h, préférence pour le samedi…"></textarea>
       </div>
-      <div class="row2">
-        <div class="field">
-          <label for="f-dispo">Disponibilités</label>
-          <select id="f-dispo" name="disponibilites">
-            <option>Indifférent</option><option>En semaine</option><option>Le samedi</option><option>En soirée</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-code">Code partenaire <span class="hint">(facultatif)</span></label>
-          <input id="f-code" name="code" type="text" maxlength="12" placeholder="ex. 33-AB2C" autocomplete="off">
-        </div>
+      <div class="accord">
+        <input type="checkbox" id="accord" name="consent" value="oui" required>
+        <label for="accord">J'accepte que mes coordonnées soient transmises au centre de tests pour organiser mon test et me contacter à ce sujet. <a href="#mentions">En savoir plus</a></label>
       </div>
-      <div class="consent">
-        <input type="checkbox" id="f-consent" name="consent" value="oui" required>
-        <label for="f-consent">J'accepte que mes coordonnées soient transmises au centre de tests psychotechniques pour organiser mon test, et que l'on me contacte à ce sujet. <a href="#mentions">En savoir plus</a>.</label>
-      </div>
-      <button class="btn" type="submit" style="width:100%;justify-content:center">Envoyer ma demande</button>
-      <div class="submit-note">Tarif du test : 100 €, réglé le jour du test. Aucun paiement en ligne.</div>
+      <button class="btn" type="submit">Envoyer ma demande</button>
+      <p class="sous-bouton">100 € le test, réglé le jour du rendez-vous.</p>
     </form>
   </div>
 </section>
 
-<section class="faq" style="padding-top:0">
+<section class="faq">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Ce qu'on nous demande le plus</h2></div>
-    <details><summary>Combien coûte le test ?</summary><p>100 €, réglés le jour du test. Ce montant reste à votre charge : il n'est pas remboursé par l'Assurance maladie. L'inscription en ligne est gratuite.</p></details>
-    <details><summary>Quand faut-il le passer ?</summary><p>Avant la visite médicale chez le médecin agréé, dont il conditionne le passage. Le plus simple est de s'y prendre tôt pour ne pas retarder la récupération ou le passage du permis. Votre courrier de la préfecture ou la décision de justice précise les démarches qui vous concernent.</p></details>
-    <details><summary>Comment se déroule-t-il ?</summary><p>Comptez environ une heure : des exercices sur ordinateur (attention, réflexes, coordination) et un entretien individuel avec le psychologue, qui reviendra avec vous sur les circonstances de votre retrait de permis.</p></details>
-    <details><summary>Et si le résultat n'est pas favorable ?</summary><p>Le test peut être repassé. Le psychologue vous explique le résultat et les suites possibles.</p></details>
-    <details><summary>Le résultat est-il valable longtemps ?</summary><p>Les résultats doivent avoir moins de 6 mois au moment de la visite médicale : prévoyez votre visite dans ce délai.</p></details>
-    <details><summary>Qu'est-ce que le code partenaire ?</summary><p>Si votre auto-école ou votre centre de stage vous a remis un flyer, le code qui y figure nous permet de savoir qui vous a orienté. Il ne change rien pour vous, ni au tarif ni au déroulement.</p></details>
+    <h2 style="margin-bottom:24px">Vos questions</h2>
+    <details><summary>Combien coûte le test&nbsp;?</summary><p>100 €, réglés le jour du test. Cette somme reste à votre charge : elle n'est pas remboursée par l'Assurance maladie. L'inscription en ligne est gratuite.</p></details>
+    <details><summary>Quand faut-il le passer&nbsp;?</summary><p>Avant la visite médicale chez le médecin agréé, qui en a besoin pour se prononcer. Mieux vaut s'y prendre tôt pour ne pas retarder la suite. Votre courrier de la préfecture ou la décision de justice précise les démarches qui vous concernent.</p></details>
+    <details><summary>Comment se déroule-t-il&nbsp;?</summary><p>Comptez environ une heure : des exercices sur ordinateur (attention, réflexes, coordination), puis un entretien avec le psychologue, qui revient avec vous sur les circonstances du retrait de votre permis.</p></details>
+    <details><summary>Et si le résultat n'est pas favorable&nbsp;?</summary><p>Le test peut être repassé. Le psychologue vous explique le résultat et la marche à suivre.</p></details>
+    <details><summary>Combien de temps le résultat est-il valable&nbsp;?</summary><p>Il doit dater de moins de 6 mois le jour de la visite médicale : prévoyez votre visite dans ce délai.</p></details>
+    <details><summary>À quoi sert le code partenaire&nbsp;?</summary><p>Si votre auto-école ou votre centre de stage vous a remis un flyer, ce code nous indique qui vous a orienté. Il ne change rien pour vous, ni au tarif ni au déroulement.</p></details>
   </div>
 </section>
 
 <footer id="mentions">
   <div class="wrap">
-    <p><b style="color:#fff">Qui fait quoi ?</b> Les tests sont réalisés par le centre CITPC, dont le psychologue est déclaré en préfecture. Cette page d'inscription est éditée par LGBUSINESS33, partenaire du centre, qui transmet votre demande au centre.</p>
-    <p><b style="color:#fff">Éditeur :</b> LGBUSINESS33 — Laurent Gouge, micro-entrepreneur — 18 avenue de la Somme, 33700 Mérignac — SIRET 901 634 907 00025 — contact@Lgbusiness33.onmicrosoft.com. <b style="color:#fff">Hébergement :</b> GitHub Pages — GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
-    <p><b style="color:#fff">Données personnelles :</b> les informations du formulaire (nom, téléphone, email, département, ville, préférences) servent uniquement à organiser votre test : elles sont transmises au centre de tests et à personne d'autre, et ne sont jamais vendues. Elles sont conservées au plus 13 mois, puis effacées. Conformément au RGPD, vous pouvez y accéder, les faire rectifier ou supprimer en écrivant à l'adresse ci-dessus.</p>
+    <p><b>Qui fait quoi.</b> Les tests sont réalisés par le centre CITPC, dont le psychologue est déclaré en préfecture. Cette page d'inscription est éditée par LGBUSINESS33, partenaire du centre, qui lui transmet votre demande.</p>
+    <p><b>Éditeur.</b> LGBUSINESS33, Laurent Gouge, micro-entrepreneur, 18 avenue de la Somme, 33700 Mérignac. SIRET 901 634 907 00025. Contact : inscriptions@Lgbusiness33.onmicrosoft.com. <b>Hébergement.</b> GitHub Pages, GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
+    <p><b>Données personnelles.</b> Les informations du formulaire servent uniquement à organiser votre test. Elles sont transmises au centre de tests et à personne d'autre, et ne sont jamais vendues. Elles sont conservées 13 mois au plus, puis effacées. Vous pouvez y accéder, les faire corriger ou supprimer en écrivant à l'adresse ci-dessus.</p>
   </div>
 </footer>
+
+<div class="barre" id="barre"><a class="btn" href="#inscription">Je m'inscris</a></div>
 
 <script>
 (function () {
   var params = new URLSearchParams(window.location.search);
   if (params.get('ok') === '1') {
-    var t = document.getElementById('thanks');
-    t.classList.add('show');
-    window.scrollTo(0, 0);
+    document.getElementById('merci').classList.add('visible');
   }
+  // Code partenaire : rempli depuis le QR code (?p=…) et gardé si la personne revient plus tard
   var code = (params.get('p') || '').toUpperCase().replace(/[^A-Z0-9-]/g, '').slice(0, 12);
   try {
     if (code) { localStorage.setItem('psy_code', code); }
     else { code = localStorage.getItem('psy_code') || ''; }
-  } catch (e) { /* stockage indisponible : on garde le code de l'adresse */ }
+  } catch (e) {}
   if (code) {
-    document.getElementById('f-code').value = code;
-    document.getElementById('partner-code').textContent = code;
-    document.getElementById('partner-banner').classList.add('show');
-    var r = document.getElementById('redirect');
+    document.getElementById('code').value = code;
+    var r = document.getElementById('retour');
     r.value = r.value.split('?')[0] + '?ok=1&p=' + encodeURIComponent(code);
+  }
+  // Sur téléphone, la barre « Je m'inscris » s'efface quand le formulaire est à l'écran
+  // (cachée aussi tant que le bouton du haut est visible, pour ne pas l'afficher deux fois)
+  var barre = document.getElementById('barre');
+  var zones = [document.querySelector('.hero .btn'), document.getElementById('inscription')];
+  var visibles = new Set();
+  if ('IntersectionObserver' in window && barre) {
+    barre.classList.add('cachee');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) visibles.add(e.target); else visibles.delete(e.target); });
+      barre.classList.toggle('cachee', visibles.size > 0);
+    }, { threshold: 0.05 });
+    zones.forEach(function (z) { if (z) obs.observe(z); });
   }
 })();
 </script>
